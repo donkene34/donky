@@ -41,7 +41,7 @@ class VideoController extends Controller
             'video' => $imagePathVideo
         ]);
 
-        return redirect()->route('home');
+        return redirect()->route('video.index');
     }
 
 

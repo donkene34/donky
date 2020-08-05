@@ -35,11 +35,24 @@
 </div>
 
 {{-- affichage des videos --}}
-<div class="container">
-    @foreach ($videos as $video)
-    <div class="video">
-        <video src="{{ asset( 'storage/'.$video->video) }}"></video>
+<div class="container-fluid">
+    <div class="row">
+        @foreach ($videos as $video)
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 video">
+            <video width="370" height="380" src="{{ asset( 'storage/'.$video->video) }}">uyuyuyyuy</video>
+            <div class="ptitre d-flex  align-items-center">
+                <div class="photo d-flex justify-content-center align-items-center mb-5">A</div>
+                <div>
+                    <div class="titre-video mx-3  font-weight-bold">{{ $video->titre }}</div>
+                    <div class="pseudo mx-3">{{ $video->user->pseudo }}</div>
+                    <div class="container d-flex ">
+                        <div class="nombre-vues">0</div>
+                        <div class="temps mx-3">{{ Carbon\Carbon::parse($video->created_at)->diffForHumans() }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endforeach
     </div>
-    @endforeach
 </div>
 @endsection
