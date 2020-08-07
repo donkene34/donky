@@ -19,12 +19,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 //route video
 
-Route::Post('/home', 'VideoController@store')->name('video.store');
 Route::get('/home','VideoController@index')->name('video.index');
+Route::get('/home/CreateVideo','VideoController@create')->name('video.create');
+Route::Post('/home', 'VideoController@store')->name('video.store');
 
 Route::get('/AA', function () {
     return "bonjour";

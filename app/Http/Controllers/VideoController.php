@@ -11,7 +11,7 @@ class VideoController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
 
@@ -20,6 +20,11 @@ class VideoController extends Controller
         $videos = video::all();
 
         return view('home',compact('videos'));
+    }
+
+    public function create()
+    {
+        return view('create');
     }
 
     public function store()

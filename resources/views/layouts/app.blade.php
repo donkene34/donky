@@ -27,27 +27,32 @@
 </head>
 <body>
     <aside>
-        <nav class="nav1 d-flex flex-column align-items-center position-fixed">
-            <div class="menu">
-                <h3><i class="fas fa-bars btn_menu"></i></h3>
+        <nav class="nav1 d-flex flex-column align-items-center">
+            <div class="menu btn_menu ">
+                <h3><i class="fas fa-bars"></i></h3>
             </div>
-            <div class="menu">
+            <div class="menu d-flex justiy-content-around flex-column align-items-center">
                 <i class="fas fa-home"></i>
+                <span class="titre"><a class="titre-menu " href="{{ route('video.index') }}">Acceuil</a></span>
             </div>
-            <div class="menu">
+            <div class="menu d-flex justiy-content-around flex-column align-items-center">
                 <i class="fas fa-fire"></i>
+                <span class="titre"><a class="titre-menu " href="{{ route('video.index') }}">Tendances</a></span>
             </div>
-            <div class="menu">
-                <i class="fas fa-album"></i>
-            </div>
-            <div class="menu">
+            <div class="menu d-flex justiy-content-around flex-column align-items-center">
                 <i class="fas fa-book"></i>
+                <span class="titre"><a class="titre-menu " href="{{ route('video.index') }}">Abonnement</a></span>
+
+            </div>
+            <div class="menu d-flex justiy-content-around flex-column align-items-center">
+                <i class="fas fa-book"></i>
+                <span class="titre"><a class="titre-menu " href="{{ route('video.index') }}">Bibliotheque</a></span>
             </div>
         </nav>
     </aside>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top shadow-sm justify-content-between">
-            <a class="navbar-brand text-primary text-decoration-none ml-5" href="{{ url('/') }}"><h4><i class="fab fa-youtube"></i>Donky</h4></a>
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top justify-content-between">
+            <a class="navbar-brand text-primary logo" href="{{ url('/') }}"><h4><i class="fab fa-youtube"></i>Donky</h4></a>
             <form class="d-flex align-items-center" action="" method="post">
                 <input type="search" placeholder="Rechercher" class="search" name="" id="" class="">
                 <input type="submit" class="submit bg-gray border border-gray" value="">
@@ -55,13 +60,13 @@
             </form>
 
             <div class="logos  d-flex align-items-center">
-                <div class="icone mr-5">
-                    <i class="fas fa-video"></i>
+                <div class="icone mr-4">
+                    <a class="text-dark" href="{{ route('video.create') }}"><i class="fas fa-video"></i></a>
                 </div>
-                <div class="icone mr-5">
+                <div class="icone mr-4">
                     <i class="fas fa-grip-horizontal"></i>
                 </div>
-                <div class="icone mr-5">
+                <div class="icone mr-4">
                     <i class="fas fa-bell"></i>
                 </div>
                 <ul class="navbar-nav ml-auto">
