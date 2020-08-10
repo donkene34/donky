@@ -6,6 +6,10 @@ aside
     width: 80px;
     z-index: 1000;
 }
+.display_none
+{
+    display: none;
+}
 #app
 {
     position: relative;
@@ -15,7 +19,7 @@ aside
 {
     background-color: rgb(243, 243, 243);
     width: calc(100vw - 90px);
-    margin-left: 80px;
+    margin-left: 90px;
 }
 .photo
 {
@@ -136,4 +140,29 @@ video
 {
     background-color: unset;
     color: unset;
+}
+aside:nth-child(2)
+{
+    width: 250px;
+    font-size: 22px;
+    background-color: white;
+    margin-top: 15px;
+}
+.lien1
+{
+    width: 100%;
+    height: 50px;
+}
+.lien1 p
+{
+    font-size: 15px;
+}
+.lien1:hover
+{
+    background-color: rgb(216, 216, 216);
+}
+.lien1:hover a
+{
+    color: unset;
+    text-decoration: unset;
 }

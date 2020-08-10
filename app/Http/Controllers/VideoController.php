@@ -49,5 +49,10 @@ class VideoController extends Controller
         return redirect()->route('video.index');
     }
 
+    public function show(Video $video)
+    {
+        return view('show',compact('video'));
+    }
+
 
 }

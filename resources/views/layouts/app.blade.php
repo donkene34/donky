@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -26,7 +27,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 <body>
-    <aside>
+    <aside style="">
         <nav class="nav1 d-flex flex-column align-items-center">
             <div class="menu btn_menu ">
                 <h3><i class="fas fa-bars"></i></h3>
@@ -49,6 +50,122 @@
                 <span class="titre"><a class="titre-menu " href="{{ route('video.index') }}">Bibliotheque</a></span>
             </div>
         </nav>
+    </aside>
+    <aside class="pt-3 display_none">
+        <nav>
+            <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-home ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">Acceuil</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-fire ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">Tendances</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-video ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">Abonnement</p>
+                </a>
+             </div>
+             <hr>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-book ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">Bibliotheque</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-sync ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">historique</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-home ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">vos videos</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-thumbs-up ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">video "j'aime"</p>
+                </a>
+             </div>
+        </nav>
+        <hr>
+        <h6 class="text-secondary text-center">ABONNEMENT</h6>
+        <nav>
+            <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                    <div class="rounded-circle h-25 w-25 bg-danger"></div>
+                    <p class="ml-4 mt-3 font-weight-bolder text-capitalize">nom</p>
+                </a>
+            </div>
+        </nav>
+        <hr>
+        <h6 class="text-secondary text-center">AUTRES CONTENUS YOUTUBE</h6>
+        <nav>
+            <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+             <div class="lien1">
+                <a href="" class="d-flex text-secondary align-items-center">
+                     <i class="fas fa-clock ml-4"></i>
+                     <p class="ml-4 mt-3 font-weight-bolder text-capitalize">a regarder plus tard</p>
+                </a>
+             </div>
+        </nav>
+        <hr>
     </aside>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top justify-content-between">

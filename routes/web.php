@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','VideoController@index');
 
 Auth::routes();
 
@@ -24,6 +22,7 @@ Auth::routes();
 Route::get('/home','VideoController@index')->name('video.index');
 Route::get('/home/CreateVideo','VideoController@create')->name('video.create');
 Route::Post('/home', 'VideoController@store')->name('video.store');
+Route::get('/home/{video}','videoController@show')->name('video.show');
 
 Route::get('/AA', function () {
     return "bonjour";

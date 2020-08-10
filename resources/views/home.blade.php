@@ -8,7 +8,9 @@
     <div class="row">
         @foreach ($videos as $video)
         <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 video">
-            <video  src="{{ asset( 'storage/'.$video->video) }}">uyuyuyyuy</video>
+            <a href="{{ route('video.show', ['video' => $video->id]) }}">
+                <video  src="{{ asset( 'storage/'.$video->video) }}"></video>
+            </a>
             <div class="ptitre d-flex  align-items-center">
                 <div class="photo d-flex justify-content-center align-items-center mb-5">A</div>
                 <div>
