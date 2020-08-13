@@ -41,4 +41,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\video');
     }
+    public function like()
+    {
+        return $this->hasMany('App\like');
+    }
 }

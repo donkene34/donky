@@ -15,4 +15,9 @@ class video extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function like()
+    {
+        return $this->hasMany('App\like');
+    }
 }

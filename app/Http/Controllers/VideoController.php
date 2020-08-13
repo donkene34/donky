@@ -54,5 +54,10 @@ class VideoController extends Controller
         return view('show',compact('video'));
     }
 
+    public  function like()
+    {
+
+    }
+
 
 }
