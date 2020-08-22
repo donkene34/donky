@@ -20,4 +20,9 @@ class video extends Model
     {
         return $this->hasMany('App\like');
     }
+
+    public function liked()
+    {
+        return $this->like->where('user_id',auth()->user()->id)->isEmpty() ? false : true;
+    }
 }

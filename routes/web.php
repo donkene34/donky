@@ -23,4 +23,4 @@ Route::get('/home','VideoController@index')->name('video.index');
 Route::get('/home/CreateVideo','VideoController@create')->name('video.create');
 Route::Post('/home', 'VideoController@store')->name('video.store');
 Route::get('/home/{video}','videoController@show')->name('video.show');
-Route::post('/home/{video}/like','videoController@like')->name('video.like');
+Route::post('/home/like','videoController@like')->name('video.like');
