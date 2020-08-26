@@ -25,4 +25,14 @@ class video extends Model
     {
         return $this->like->where('user_id',auth()->user()->id)->isEmpty() ? false : true;
     }
+
+    public function dislike()
+    {
+        return $this->hasMany('App\dislike');
+    }
+
+    public function disliked()
+    {
+        return $this->dislike->where('user_id',auth()->user()->id)->isEmpty() ? false : true;
+    }
 }

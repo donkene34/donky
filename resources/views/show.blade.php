@@ -23,11 +23,11 @@
 
 
                     {{-- formulaire dislike --}}
-                    <form action="" class="d-flex" method="post">
+                    <form action="{{ route('video.dislike') }}" id="form-dislike" class="d-flex" method="post">
                         @csrf
                         <input type="hidden" name="" value="{{ $video->id }}">
                         <input type="hidden" id="video-id" name="videoId" value="{{ $video->id }}">
-                        <button type="submit" class="btn-like" value=""><i class="fas fa-thumbs-down text-secondary"></i><span class="ml-2 text-secondary" id="count">{{ $video->like->count() }}</span></button>
+                        <button type="submit" class="btn-like" value=""><i class="fas fa-thumbs-down text-secondary"></i><span class="ml-2 text-secondary" id="count">{{ $video->dislike->count() }}</span></button>
                     </form>
                 </p>
                 <p><i class="fas fa-share text-secondary">PARTAGER</i></p>
@@ -36,6 +36,9 @@
             </div>
         </div>
         <hr>
+        <div>
+            <div class="border border-secondary rounded"></div>
+        </div>
         <div>
             {{ $video->description }}
         </div>

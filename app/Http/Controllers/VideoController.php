@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\like;
 use App\video;
+use App\dislike;
 use App\Rules\VideoRule;
 use Illuminate\Http\Request;
 
@@ -82,6 +83,38 @@ class VideoController extends Controller
             $like->save();
 
             return redirect()->route('video.show',['video' => $idVideo])->with('session','ajouté des likes');
+
+        }
+    }
+
+    public function dislike(Request $request)
+    {
+        $idVideo = $request->input('videoId');
+
+        $video = video::find($idVideo);
+
+        if($video->disliked())
+        {
+            $res = dislike::where([
+                'user_id' => auth()->user()->id,
+                'video_id' => $idVideo
+            ])->delete();
+
+            if($res)
+            {
+                return redirect()->route('video.show',['video' => $idVideo])->with('session','retiré des dislikes');
+            }
+        }
+        else
+        {
+            $dislike = new dislike();
+
+            $dislike->user_id = auth()->user()->id;
+            $dislike->video_id = $idVideo;
+            $dislike->save();
+
+            return redirect()->route('video.show',['video' => $idVideo])->with('session','ajouté aux dislikes');
+
 
         }
     }
