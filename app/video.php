@@ -35,4 +35,9 @@ class video extends Model
     {
         return $this->dislike->where('user_id',auth()->user()->id)->isEmpty() ? false : true;
     }
+
+    public function commentaire()
+    {
+        return $this->hasMany('App\commentaire');
+    }
 }

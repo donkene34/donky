@@ -12,7 +12,7 @@
                 <video  src="{{ asset( 'storage/'.$video->video) }}"></video>
             </a>
             <div class="ptitre d-flex  align-items-center">
-                <div class="photo d-flex justify-content-center align-items-center mb-5">A</div>
+                <div class="photo d-flex justify-content-center align-items-center mb-5 text-uppercase">{{ substr($video->user->pseudo,0,1) }}</div>
                 <div>
                     <div class="titre-video mx-3  font-weight-bold">{{ $video->titre }}</div>
                     <div class="pseudo mx-3">{{ $video->user->pseudo }}</div>

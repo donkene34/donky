@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\like;
 use App\video;
 use App\dislike;
+use App\commentaire;
 use App\Rules\VideoRule;
 use Illuminate\Http\Request;
 
@@ -51,9 +52,11 @@ class VideoController extends Controller
         return redirect()->route('video.index');
     }
 
-    public function show(Video $video)
+    public function show(Video $video, commentaire $commentaires)
     {
-        return view('show',compact('video'));
+        $commentaires = commentaire::where('video_id',$video->id)->orderBy('id','desc')->get();
+
+        return view('show',compact(['video','commentaires']));
     }
 
     public  function like(Request $request)
@@ -114,7 +117,6 @@ class VideoController extends Controller
             $dislike->save();
 
             return redirect()->route('video.show',['video' => $idVideo])->with('session','ajouté aux dislikes');
-
 
         }
     }

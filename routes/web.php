@@ -25,3 +25,9 @@ Route::Post('/home', 'VideoController@store')->name('video.store');
 Route::get('/home/{video}','videoController@show')->name('video.show');
 Route::post('/home/like','videoController@like')->name('video.like');
 Route::post('/home/dislike','videoController@dislike')->name('video.dislike');
+
+//commentaires
+Route::post('home/commentaire','commentaireController@store')->name('commentaire.store');
+
+//reponses
+Route::post('homr/reponse','reponseController@store')->name('reponse.store');

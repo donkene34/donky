@@ -36,27 +36,55 @@
             </div>
         </div>
         <hr>
-        <div>
-            <div class="border border-secondary rounded"></div>
+        <div class="d-flex justify-content-between">
+            <div class="d-flex">
+                <div class="photo d-flex justify-content-center align-items-center ">{{ strtoupper(substr($video->user->pseudo,0,1)) }}</div>
+                <div class="ml-3">
+                    <div class="font-weight-bolder">{{ $video->user->pseudo }}</div>
+                    <div class="text-secondary">15 abonnés</div>
+                </div>
+            </div>
+            <div><button class="btn btn-primary text-uppercase text-white">s'abonner</button></div>
         </div>
+        <hr>
         <div>
             {{ $video->description }}
         </div>
         <div>
-            <form action="" method="post">
-                <input type="text" name="" id="" placeholder="Ajouter Un Commentaire Public">
+            <form action="{{route('commentaire.store')}}" method="post">
+                @csrf
+                @method('POST')
+                <input type="text" name="commentaire" id="" placeholder="Ajouter Un Commentaire Public">
+                <input type="hidden" name="idVideo" value="{{$video->id}}">
                 <input type="reset" value="ANNULER">
                 <input type="submit" value="AJOUTER UN COMMENTAIRE ">
             </form>
         </div>
         <div>
             <div>photo</div>
-            <p>commentaire</p>
-            <p>
-                <i class="fas fa-thumbs-up text-secondary">
-                </i><i class="fas fa-thumbs-down text-secondary"></i>
-            </p>
-            <button>REPONDRE</button>
+            <p>commentaires</p>
+            @foreach ($commentaires as $commentaire)
+                <p class="text-primary">{{$commentaire->commentaire}}</p>
+                <p>
+                    <i class="fas fa-thumbs-up text-secondary">
+                    </i><i class="fas fa-thumbs-down text-secondary"></i>
+                </p>
+
+                <form action="{{route('reponse.store')}}" method="post">
+                    @csrf
+                    @method('POST')
+                    <input type="text" name="reponse" id="">
+                    <input type="hidden" name="idVideo" value="{{$video->id}}">
+                    <input type="hidden" name="idCommentaire" value="{{$commentaire->id}}">
+                    <input type="submit" value="envoyer votre reponse">
+                </form>
+                <div class="reponses">
+                    @foreach ($commentaire->reponses as $reponse)
+                        <p class="text-danger">{{$reponse->reponse}}</p>
+                    @endforeach
+                </div>
+
+            @endforeach
         </div>
     </div>
 </section>
