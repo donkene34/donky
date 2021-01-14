@@ -1,3 +1,7 @@
+*
+{
+    font-size: Roboto Condensed;
+}
 aside
 {
     position: fixed;
@@ -25,12 +29,13 @@ aside
 {
      height: 50px;
      width: 50px;
+     min-width: 50px;
      border: 2px solid gray;
-     border-radius:50% ;
-     -webkit-border-radius:50% ;
-     -moz-border-radius:50% ;
-     -ms-border-radius:50% ;
-     -o-border-radius:50% ;
+     border-radius: 100%;
+     -webkit-border-radius: 100%;
+     -moz-border-radius: 100%;
+     -ms-border-radius: 100%;
+     -o-border-radius: 100%;
 }
 video
 {
@@ -169,7 +174,14 @@ aside:nth-child(2)
 .btn-like
 {
     border: none;
-    background-color: unset;
     outline: none;
     font-size: 20px;
+}
+.video-show
+{
+    width:65%;
+}
+.titre-video-show
+{
+    font-size:25px
 }

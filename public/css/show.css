@@ -1,0 +1,214 @@
+.noir
+{
+    height: 100vh;
+    width: 100%;
+    opacity: 0.5;
+}
+.div-modal
+{
+   left: 20%;
+   top: 20%;
+   visibility: hidden;
+}
+#infos-video
+{
+    visibility: unset;
+}
+.select-video
+{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(241, 241, 241);
+}
+.select-video img
+{
+    width: 50px;
+    height: 50px;
+}
+.input-file
+{
+    background-color: red;
+}
+.btn-selection
+{
+    height: 45px;
+    width: 300px;
+    background-color: blue;
+    color: white;
+    border:none;
+    font-weight: bold;
+    position: absolute;
+    right:37.4%;
+    z-index: 10;
+}
+.input-file input
+{
+    height: 45px;
+    width: 300px;
+    position: relative;
+    z-index: 20;
+    opacity: 0;
+    cursor: pointer;
+}
+.titre-video-upload
+{
+    font-weight: bold;
+    font-size: 25px;
+}
+.enregistrer-brouillon
+{
+    background-color:rgb(224, 221, 221);
+}
+.img img
+{
+    height: 25px;
+    width: 25px;
+}
+.croix
+{
+    border: unset;
+    background-color: unset;
+    font-size: 3em;
+}
+.hr
+{
+    height: 1px;
+    width: 100%;
+    background-color: rgb(209, 209, 209);
+}
+.sous-titres
+{
+    width:80%;
+}
+.sous-titre
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position:relative;
+    width:120px;
+    height:90px;
+    border:1px solid unset;
+    border-radius:5%;
+    font-size:bold;
+}
+.sous-titre:hover
+{
+    background-color: lightblue;
+    color:blue;
+}
+.sous-titre:hover .cercle
+{
+    border:3px solid blue;
+}
+.sous-titre .cercle
+{
+    height: 20px;
+    width: 20px;
+    border: 4px solid darkgray;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color:white;
+    position:relative;
+    z-index:20;
+}
+.trait-noir
+{
+    height: 2px;
+    background-color: darkgray;
+    width: 80%;
+    position: absolute;
+    top: 135px;
+    z-index:10;
+    right:90px;
+}
+.content-textarea
+{
+    width: 30vw;
+    height: 16vh;
+    border: 1px solid black;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.content-textarea textarea
+{
+    width: 100%;
+    height:100px;
+    border: none;
+    outline: none;
+}
+.focus2
+{
+    height:150px;
+}
+.content-textarea textarea:focus .content-textarea
+{
+    border: 1px solid blue;
+}
+.border-bleu
+{
+    border: 1px solid blue;
+}
+.img-miniature
+{
+    display:flex;
+    justify-content: space-evenly;
+}
+.ajout-miniature div
+{
+    height: 80px;
+    width: 120px;
+    border:0.5px dashed black;
+}
+.ajout-miniature input
+{
+    position: absolute;
+    transform: translateY(-50px);
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
+    -o-transform: translateY(-50px);
+    opacity:0;
+}
+.ajout-miniature img
+{
+    height: 30px;
+    width: 30px;
+}
+.mini-miniature
+{
+    height: 80px;
+    width: 120px;
+    border:0.5px solid black;
+    background-color:rgb(207, 203, 203);
+}
+.i
+{
+    height:20px;
+    width: 20px;
+    background-color: transparent;
+}
+.resume
+{
+    background-color: rgb(219, 219, 219);
+    padding: 10px;
+}
+.image-link-video
+{
+    height: 200px;
+    width: 100%;
+    background-color: gray;
+}
+.lien-link-video
+{
+    background-color: rgb(228, 228, 228);
+}
+
+
